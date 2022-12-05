@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title><%= current_page.data.fetch("title", "Sitepress") %></title>
+    <%= stylesheet_link_tag "build/site" %>
+    <%= javascript_include_tag "build/application" %>
+  </head>
+
+  <body data-controller="hello">
+    <header>
+      <h1 id="title"><%= current_page.data.fetch("title", "Sitepress") %></h1>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      Running version Sitepress <%= Sitepress::VERSION %>. Visit <a href="https://sitepress.cc/">sitepress.cc</a> for documentation, help, and updates.
+    </footer>
+  </body>
+</html>

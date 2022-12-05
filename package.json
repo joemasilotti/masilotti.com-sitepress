@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "esbuild": "^0.15.18",
+    "postcss": "^8.4.19",
+    "postcss-import": "^15.0.1",
+    "tailwindcss": "^3.2.4"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/stylesheets/site.css -o ./assets/stylesheets/build/site.css --watch",
+    "build:js": "esbuild assets/javascripts/*.* --bundle --sourcemap --outdir=assets/javascripts/build"
+  }
+}
