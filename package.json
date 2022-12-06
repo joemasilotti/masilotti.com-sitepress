@@ -3,6 +3,7 @@
     "@hotwired/stimulus": "^3.2.1"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.8",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
     "esbuild": "^0.15.18",

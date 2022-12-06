@@ -7,7 +7,7 @@ module.exports = {
     "./models/**/*.*",
     "./pages/**/*.*"
   ],
-  // plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography")],
   theme: {
     fontSize: {
       xs: ["0.8125rem", { lineHeight: "1.5rem" }],
