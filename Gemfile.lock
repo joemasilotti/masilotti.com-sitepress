@@ -67,6 +67,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     builder (3.2.4)
+    chronic (0.10.2)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     erubi (1.11.0)
@@ -75,6 +76,9 @@ GEM
       activesupport (>= 5.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
+    inline_svg (1.8.0)
+      activesupport (>= 3.0)
+      nokogiri (>= 1.6)
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -191,6 +195,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chronic
+  inline_svg
   markdown-rails
   sass-rails
   sitepress (~> 3.2)

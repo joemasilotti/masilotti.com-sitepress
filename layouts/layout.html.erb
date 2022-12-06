@@ -1,23 +1,28 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en" class="h-full antialiased">
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= current_page.data.fetch("title", "Sitepress") %></title>
     <%= stylesheet_link_tag "build/site" %>
     <%= javascript_include_tag "build/application" %>
   </head>
 
-  <body data-controller="hello">
-    <header>
-      <h1 id="title"><%= current_page.data.fetch("title", "Sitepress") %></h1>
-    </header>
+  <body class="flex h-full flex-col bg-zinc-50">
+    <div class="fixed inset-0 flex justify-center sm:px-8">
+      <div class="flex w-full max-w-7xl lg:px-8">
+        <div class="w-full bg-white ring-1 ring-zinc-100"></div>
+      </div>
+    </div>
 
-    <main>
-      <%= yield %>
-    </main>
+    <div class="relative">
+      <%= render Header.new(request_path: current_page.request_path, large_avatar: current_page.data["large_nav_avatar"]) %>
 
-    <footer>
-      Running version Sitepress <%= Sitepress::VERSION %>. Visit <a href="https://sitepress.cc/">sitepress.cc</a> for documentation, help, and updates.
-    </footer>
+      <main>
+        <%= yield %>
+      </main>
+
+      <%# render "footer" %>
+    </div>
   </body>
 </html>

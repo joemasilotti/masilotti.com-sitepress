@@ -12,6 +12,6 @@
   },
   "scripts": {
     "build:css": "tailwindcss -i ./assets/stylesheets/site.css -o ./assets/stylesheets/build/site.css --watch",
-    "build:js": "esbuild assets/javascripts/*.* --bundle --sourcemap --outdir=assets/javascripts/build"
+    "build:js": "esbuild assets/javascripts/*.* --bundle --sourcemap --outdir=assets/javascripts/build --watch"
   }
 }

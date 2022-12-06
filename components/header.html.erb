@@ -1,0 +1,32 @@
+<header class="pointer-events-none relative z-50 flex flex-col">
+  <% if large_avatar %>
+    <div class="order-last mt-12 pt-1">
+      <%= render Container.new(class_name: "top-0 order-last -mb-3 pt-3") do %>
+        <div class="w-full">
+          <div class="relative">
+            <%= render Avatar.new(large: true) %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="top-0 z-10 h-16 pt-6">
+    <%= render Container.new do %>
+      <div class="relative flex gap-4 justify-center">
+        <div class="flex flex-1">
+          <% unless large_avatar %>
+            <%= render Avatar.new %>
+          <% end %>
+        </div>
+
+        <div class="flex flex-1 justify-end md:justify-center">
+          <%# render Navigation::Mobile.new(class_name: "pointer-events-auto md:hidden") %>
+          <%= render Navigation::Desktop.new(request_path:) %>
+        </div>
+
+        <div class="flex justify-end md:flex-1" />
+      </div>
+    <% end %>
+  </div>
+</header>

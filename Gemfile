@@ -16,3 +16,9 @@ gem "view_component"
 
 # Utility first CSS framework, Tailwind CSS.
 gem "tailwindcss-rails", "~> 2.0"
+
+# Inline and style SVG assets.
+gem "inline_svg"
+
+# Parse frontmatter dates.
+gem "chronic"

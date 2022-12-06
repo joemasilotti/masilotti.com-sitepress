@@ -1,0 +1,9 @@
+<li>
+  <%= link_to href, class: ["relative block px-3 py-2 transition", "text-teal-500": active?, "hover:text-teal-500": !active?] do %>
+    <%= title %>
+
+    <% if active? %>
+      <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0" />
+    <% end %>
+  <% end %>
+</li>

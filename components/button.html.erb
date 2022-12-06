@@ -1,0 +1,9 @@
+<% if href %>
+  <%= content_tag :a, href:, class: class_name, **properties do %>
+    <%= content %>
+  <% end %>
+<% else %>
+  <%= content_tag :button, class: class_name, **properties do %>
+    <%= content %>
+  <% end %>
+<% end %>
