@@ -1,0 +1,19 @@
+conferences:
+  - href: "#"
+    title: In space, no one can watch you stream — until now
+    description: A technical deep-dive into HelioStream, the real-time streaming library I wrote for transmitting live video back to Earth.
+    event: SysConf 2021
+    cta: Watch video
+
+  - href: "#"
+    title: Lessons learned from our first product recall
+    description: They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated.
+    event: Business of Startups 2020
+    cta: Watch video
+
+podcasts:
+  - href: "#"
+    title: Using design as a competitive advantage
+    description: How we used world-class visual design to attract a great team, win over customers, and get more press for Planetaria.
+    event: Encoding Design, July 2022
+    cta: Listen to podcast

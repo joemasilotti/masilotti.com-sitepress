@@ -1,0 +1,25 @@
+workstation:
+  - title: 16” MacBook Pro, M1 Max, 64GB RAM (2021)
+    description: |
+      I was using an Intel-based 16” MacBook Pro prior to this and the
+      difference is night and day. I’ve never heard the fans turn on a
+      single time, even under the incredibly heavy loads I put it
+      through with our various launch simulations.
+
+  - title: Apple Pro Display XDR (Standard Glass)
+    description: |
+      The only display on the market if you want something HiDPI and
+      bigger than 27”. When you’re working at planetary scale, every
+      pixel you can get counts.
+
+development_tools:
+  - title: Sublime Text 4
+    description: |
+      I don’t care if it’s missing all of the fancy IDE features
+      everyone else relies on, Sublime Text is still the best text
+      editor ever made.
+
+  - title: iTerm2
+    description: |
+      I’m honestly not even sure what features I get with this that
+      aren’t just part of the macOS Terminal but it’s what I use.

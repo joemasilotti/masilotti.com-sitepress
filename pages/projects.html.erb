@@ -1,0 +1,31 @@
+<% projects = data(:projects) %>
+
+<%= render SimpleLayout.new(
+  title: "Things I’ve made trying to put my dent in the universe.",
+  intro: "I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+) do %>
+  <ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+    <% projects.each do |project| %>
+      <%= render Card.new(as: "li") do %>
+        <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
+          <%= image_tag project.logo, alt: project.name, class: "h-8 w-8" %>
+        </div>
+
+        <h2 class="mt-6 text-base font-semibold text-zinc-800">
+          <%= render Card::Link.new(project.link.href, options: {target: "_blank"}) do %>
+            <%= project.name %>
+          <% end %>
+        </h2>
+
+        <%= render Card::Description.new do %>
+          <%= project.description %>
+        <% end %>
+
+        <p class="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500">
+          <%= inline_svg "icons/mini/link.svg", class: "h-6 w-6 flex-none" %>
+          <span class="ml-2"><%= project.link.label %></span>
+        </p>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>

@@ -21,7 +21,7 @@
         </div>
 
         <div class="flex flex-1 justify-end md:justify-center">
-          <%# render Navigation::Mobile.new(class_name: "pointer-events-auto md:hidden") %>
+          <%= render Navigation::Mobile.new %>
           <%= render Navigation::Desktop.new(request_path:) %>
         </div>
 

@@ -1,0 +1,30 @@
+<div data-controller="toggle" data-toggle-visibility-class="hidden" class="pointer-events-auto md:hidden">
+  <button type="button" data-action="toggle#toggle:prevent" class="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur">
+    Menu
+    <%= inline_svg "icons/mini/chevron_down.svg", class: "ml-3 h-auto w-3 stroke-zinc-500 group-hover:stroke-zinc-700" %>
+  </button>
+
+  <div data-toggle-target="element" class="hidden fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm" />
+    <div class="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5">
+      <div class="flex flex-row-reverse items-center justify-between">
+        <button type="button" data-action="toggle#toggle:prevent" aria-label="Close menu" class="-m-1 p-1">
+          <%= inline_svg "icons/mini/x_mark.svg", class: "h-6 w-6 text-zinc-500" %>
+        </button>
+
+        <h2 class="text-sm font-medium text-zinc-600">
+          Navigation
+        </h2>
+      </div>
+
+      <nav class="mt-6">
+        <ul class="-my-2 divide-y divide-zinc-100 text-base text-zinc-800">
+          <%= render Navigation::MobileItem.new("About", "/about") %>
+          <%= render Navigation::MobileItem.new("Articles", "/articles") %>
+          <%= render Navigation::MobileItem.new("Projects", "/projects") %>
+          <%= render Navigation::MobileItem.new("Speaking", "/speaking") %>
+          <%= render Navigation::MobileItem.new("Uses", "/uses") %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

@@ -5,7 +5,8 @@ module.exports = {
     "./helpers/**/*.*",
     "./layouts/**/*.*",
     "./models/**/*.*",
-    "./pages/**/*.*"
+    "./pages/**/*.*",
+    "./partials/**/*.*"
   ],
   plugins: [require("@tailwindcss/typography")],
   theme: {
