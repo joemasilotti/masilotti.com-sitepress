@@ -155,6 +155,12 @@ module.exports = {
           "figcaption > p": {
             margin: 0,
           },
+          "figure a": {
+            textDecoration: "none"
+          },
+          "figure a:hover figcaption": {
+            textDecoration: "underline"
+          },
 
           // Lists
           ul: {

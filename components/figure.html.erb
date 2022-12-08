@@ -1,0 +1,14 @@
+<figure>
+  <% if href.present? %>
+    <%= link_to href do %>
+      <%= image_tag src, alt: caption, **options %>
+      <figcaption class="flex items-center">
+        <%= caption %>
+        <%= inline_svg "icons/mini/link.svg", class: "h-4 w-4 ml-1.5" %>
+      </figcaption>
+    <% end %>
+  <% else %>
+    <%= image_tag src, alt: caption, **options %>
+    <figcaption><%= caption %></figcaption>
+  <% end %>
+</figure>
