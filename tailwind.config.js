@@ -1,4 +1,6 @@
 /** @type {import("tailwindcss").Config} */
+const colors = require("tailwindcss/colors")
+
 module.exports = {
   content: [
     "./components/**/*.*",
@@ -8,8 +10,16 @@ module.exports = {
     "./pages/**/*.*",
     "./partials/**/*.*"
   ],
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography")
+  ],
   theme: {
+    extend: {
+      colors: {
+        primary: colors.emerald
+      }
+    },
     fontSize: {
       xs: ["0.8125rem", { lineHeight: "1.5rem" }],
       sm: ["0.875rem", { lineHeight: "1.5rem" }],
@@ -30,10 +40,10 @@ module.exports = {
         css: {
           "--tw-prose-body": theme("colors.zinc.600"),
           "--tw-prose-headings": theme("colors.zinc.900"),
-          "--tw-prose-links": theme("colors.teal.500"),
-          "--tw-prose-links-hover": theme("colors.teal.600"),
-          "--tw-prose-underline": theme("colors.teal.500 / 0.2"),
-          "--tw-prose-underline-hover": theme("colors.teal.500"),
+          "--tw-prose-links": theme("colors.primary.500"),
+          "--tw-prose-links-hover": theme("colors.primary.600"),
+          "--tw-prose-underline": theme("colors.primary.500 / 0.2"),
+          "--tw-prose-underline-hover": theme("colors.primary.500"),
           "--tw-prose-bold": theme("colors.zinc.900"),
           "--tw-prose-counters": theme("colors.zinc.900"),
           "--tw-prose-bullets": theme("colors.zinc.900"),
