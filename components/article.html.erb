@@ -4,8 +4,10 @@
       <%= article.title %>
     <% end %>
 
-    <%= render Card::Eyebrow.new(as: "time", decorate: true, class_name: class_names("md:hidden": wide), properties: {datetime: article.date}) do %>
-      <%= article.formatted_date %>
+    <% unless hide_date %>
+      <%= render Card::Eyebrow.new(as: "time", decorate: true, class_name: class_names("md:hidden": wide), properties: {datetime: article.date}) do %>
+        <%= article.formatted_date %>
+      <% end %>
     <% end %>
 
     <%= render Card::Description.new do %>
@@ -17,7 +19,7 @@
     <% end %>
   <% end %>
 
-  <% if wide %>
+  <% if wide && !hide_date %>
     <%= render Card::Eyebrow.new(as: "time", class_name: "mt-1 hidden md:block", properties: {datetime: article.date}) do %>
       <%= article.formatted_date %>
     <% end %>

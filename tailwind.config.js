@@ -155,11 +155,11 @@ module.exports = {
           "figcaption > p": {
             margin: 0,
           },
-          "figure a": {
-            textDecoration: "none"
+          "figure a figcaption": {
+            textDecoration: "underline"
           },
           "figure a:hover figcaption": {
-            textDecoration: "underline"
+            color: theme("colors.zinc.500"),
           },
 
           // Lists
@@ -173,8 +173,8 @@ module.exports = {
             paddingLeft: theme("spacing.6"),
           },
           li: {
-            marginTop: theme("spacing.6"),
-            marginBottom: theme("spacing.6"),
+            marginTop: theme("spacing.4"),
+            marginBottom: theme("spacing.4"),
             paddingLeft: theme("spacing[3.5]"),
           },
           "li::marker": {

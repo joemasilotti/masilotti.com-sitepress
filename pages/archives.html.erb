@@ -1,0 +1,17 @@
+---
+title: Archives
+
+---
+
+<%= render SimpleLayout.new(
+  title: "Archives",
+  intro: "Everything I've ever published on my site, in reverse chronological order."
+) do %>
+  <div class="md:border-l md:border-zinc-100 md:pl-6">
+    <div class="flex max-w-3xl flex-col space-y-16">
+      <% ArticlePage.all.each do |article| %>
+        <%= render Article.new(article, wide: true) %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -1,17 +1,22 @@
 ---
 title: Articles
+description: |
+  Over the years I’ve published dozens of articles — some more noteworthy
+  than others. Here are some of my personal favorites.
 
 ---
 
 <%= render SimpleLayout.new(
-  title: "Writing on software design, company building, and the aerospace industry.",
-  intro: "All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+  title: "My writing on Turbo Native, Ruby on Rails, and how I build successful businesses.",
+  intro: current_page.data["description"]
 ) do %>
-  <div class="md:border-l md:border-zinc-100 md:pl-6">
-    <div class="flex max-w-3xl flex-col space-y-16">
-      <% ArticlePage.all.each do |article| %>
-        <%= render Article.new(article, wide: true) %>
-      <% end %>
-    </div>
+  <div class="flex max-w-3xl flex-col space-y-16">
+    <% ArticlePage.favorites.each do |article| %>
+      <%= render Article.new(article, wide: true, hide_date: true) %>
+    <% end %>
+  </div>
+
+  <div class="prose mt-16">
+    <p>Read the rest of my articles in the <%= link_to "archives", "/archives" %>.</p>
   </div>
 <% end %>

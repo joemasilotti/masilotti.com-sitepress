@@ -1,9 +1,10 @@
 ---
 title: About
+description: I’m Joe Masilotti, the Turbo Native guy.
 
 ---
 
-<% social_urls = data(:social_urls) %>
+<% socials = data(:socials) %>
 
 <%= render Container.new(class_name: "mt-16 sm:mt-32") do %>
   <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
@@ -14,9 +15,7 @@ title: About
     </div>
 
     <div class="lg:order-first lg:row-span-2">
-      <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
-        I’m Spencer Sharp. I live in New York City, where I design the future.
-      </h1>
+      <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl"><%= current_page.data["description"] %></h1>
 
       <div class="mt-6 space-y-7 text-base text-zinc-600">
         <p>
@@ -53,22 +52,12 @@ title: About
 
     <div class="lg:pl-20">
       <ul role="list">
-        <%= render WideSocialLink.new(href: social_urls.twitter, icon: :twitter) do %>
-          Follow on Twitter
-        <% end %>
-        <%= render WideSocialLink.new(href: social_urls.github, icon: :github, class_name: "mt-4") do %>
-          Follow on GitHub
-        <% end %>
-        <%= render WideSocialLink.new(href: social_urls.mastodon, icon: :mastodon, class_name: "mt-4") do %>
-          Follow on Mastodon
-        <% end %>
-        <%= render WideSocialLink.new(href: social_urls.linkedin, icon: :linkedin, class_name: "mt-4") do %>
-          Follow on LinkedIn
-        <% end %>
+        <%= render WideSocialLink.new(href: socials.twitter.url, label: socials.twitter.title, icon: socials.twitter.icon) %>
+        <%= render WideSocialLink.new(href: socials.github.url, label: socials.github.title, icon: socials.github.icon, class_name: "mt-4") %>
+        <%= render WideSocialLink.new(href: socials.mastodon.url, label: socials.mastodon.title, icon: socials.mastodon.icon, class_name: "mt-4") %>
+        <%= render WideSocialLink.new(href: socials.linkedin.url, label: socials.linkedin.title, icon: socials.linkedin.icon, class_name: "mt-4") %>
 
-        <%= render WideSocialLink.new(href: social_urls.email, icon: "solid/envelope", class_name: "mt-8 border-t border-zinc-100 pt-8") do %>
-          <%= data(:site).email %>
-        <% end %>
+        <%= render WideSocialLink.new(href: socials.email.url, label: socials.email.handle, icon: socials.email.icon, class_name: "mt-8 border-t border-zinc-100 pt-8") %>
       </ul>
     </div>
   </div>
