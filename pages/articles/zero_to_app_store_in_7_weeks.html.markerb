@@ -3,9 +3,10 @@ title: Zero to App Store in 7 weeks
 date: 2022-07-22
 description: |
   New record! I ported a client’s Ruby on Rails app to iOS and went live in
-  the App Store in 7 weeks.
+  the App Store in 7 weeks. Here's how I did it.
 layout: article
 favorite: true
+index: 1
 
 ---
 

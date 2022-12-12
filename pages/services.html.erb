@@ -1,4 +1,9 @@
-<% tools = data(:tools) %>
+---
+title: Services
+
+---
+
+<% services = data(:services) %>
 
 <%= render SimpleLayout.new(
   title: "Software I use, gadgets I love, and other things I recommend.",
@@ -6,13 +11,13 @@
 ) do %>
   <div class="space-y-20">
     <%= render Toolbox::Section.new("Workstation") do %>
-      <% tools.workstation.each do |tool| %>
+      <% services.workstation.each do |tool| %>
         <%= render Toolbox::Tool.new(**tool.to_h) %>
       <% end %>
     <% end %>
 
   <%= render Toolbox::Section.new("Development tools") do %>
-    <% tools.development_tools.each do |tool| %>
+    <% services.development_tools.each do |tool| %>
       <%= render Toolbox::Tool.new(**tool.to_h) %>
     <% end %>
   <% end %>

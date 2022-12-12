@@ -28,3 +28,4 @@ New features/pages I'd love to see included.
 * A services or "hire me" page highlighting what I can help folks with
 * Update the Turbo Native workshop page to collect only email
 * Redirect `/turbo-ios` to `turbo-native`
+* Extract input fields to ensure same style (maybe small vs. base?)

@@ -1,51 +1,36 @@
 ---
-title: Software developer, founder, and Turbo Native expert.
-description: |
-  I'm Joe, an independent developer and founder based in Portland, OR.
-  I help businesses port their Ruby on Rails apps to iOS with Turbo Native.
-  I'm also the founder of RailsDevs, a reverse job board for Ruby on Rails
-  developers.
-large_nav_avatar: true
+title: Joe Masilotti, the Turbo Native guy
+description: I help businesses build and launch hybrid iOS apps powered by Turbo Native and Ruby on Rails.
 
 ---
 
 <% socials = data(:socials) %>
 
-<%= render Container.new(class_name: "mt-9") do %>
-  <div class="max-w-2xl">
-    <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl"><%= current_page.data["title"] %></h1>
-
-    <p class="mt-6 text-base text-zinc-600"><%= current_page.data["description"] %></p>
-
-    <div class="mt-6 flex gap-6">
-      <%= render SocialLink.new(href: socials.email.url, label: socials.email.title, icon: socials.email.icon) %>
-      <%= render SocialLink.new(href: socials.twitter.url, label: socials.twitter.title, icon: socials.twitter.icon) %>
-      <%= render SocialLink.new(href: socials.github.url, label: socials.github.title, icon: socials.github.icon) %>
-      <%= render SocialLink.new(href: socials.mastodon.url, label: socials.mastodon.title, icon: socials.mastodon.icon) %>
-      <%= render SocialLink.new(href: socials.linkedin.url, label: socials.linkedin.title, icon: socials.linkedin.icon) %>
-    </div>
-  </div>
-<% end %>
-
-<%= render Container.new(class_name: "mt-24 md:mt-28") do %>
-  <div class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-    <div class="flex flex-col gap-16">
-      <h2 class="text-lg font-semibold -mb-8">My favorite writing on Turbo Native, Ruby on Rails, and how I build successful businesses.</h2>
-
-      <% ArticlePage.favorites.each do |article| %>
-        <%= render Article.new(article, hide_date: true) %>
-      <% end %>
-
-      <div>
-        <%= render Button.new(href: "/archives", icon: "mini/arrow_right") do %>
-          Read more
-        <% end %>
+<%= render Container.new(class_name: "mt-16 sm:mt-32") do %>
+  <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+    <div class="lg:pl-20">
+      <div class="max-w-[250px] px-2.5 lg:max-w-none">
+        <%= image_tag "joe.jpg", alt: "Joe Masilotti", class: "aspect-square sm:rotate-3 rounded-2xl bg-zinc-100 object-cover" %>
       </div>
     </div>
 
-    <div class="space-y-10 lg:pl-16 xl:pl-24">
-      <%= render Newsletter.new %>
-      <%# TODO: render Resume.new %>
+    <div class="lg:order-first lg:row-span-2">
+      <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">I'm <%= current_page.data["title"] %>.</h1>
+
+      <div class="prose">
+        <%= render partial: "partials/about" %>
+      </div>
+    </div>
+
+    <div class="lg:pl-20">
+      <ul role="list">
+        <%= render WideSocialLink.new(href: socials.email.url, label: socials.email.handle, icon: socials.email.icon) %>
+
+        <%= render WideSocialLink.new(href: socials.twitter.url, label: socials.twitter.title, icon: socials.twitter.icon, class_name: "mt-8 border-t border-zinc-100 pt-8") %>
+        <%= render WideSocialLink.new(href: socials.github.url, label: socials.github.title, icon: socials.github.icon, class_name: "mt-4") %>
+        <%= render WideSocialLink.new(href: socials.mastodon.url, label: socials.mastodon.title, icon: socials.mastodon.icon, class_name: "mt-4") %>
+        <%= render WideSocialLink.new(href: socials.linkedin.url, label: socials.linkedin.title, icon: socials.linkedin.icon, class_name: "mt-4") %>
+      </ul>
     </div>
   </div>
 <% end %>

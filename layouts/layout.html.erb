@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= current_page.data.fetch("title", "Sitepress") %></title>
+    <title><%= [current_page.data["title"], "Masilotti.com"].compact.join(" &bull; ").html_safe %></title>
     <%= tag.meta name: "description", content: current_page.data["description"] %>
     <%= stylesheet_link_tag "build/site" %>
     <%= javascript_include_tag "build/application" %>

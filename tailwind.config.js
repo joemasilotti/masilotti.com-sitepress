@@ -40,8 +40,8 @@ module.exports = {
         css: {
           "--tw-prose-body": theme("colors.zinc.600"),
           "--tw-prose-headings": theme("colors.zinc.900"),
-          "--tw-prose-links": theme("colors.primary.500"),
-          "--tw-prose-links-hover": theme("colors.primary.600"),
+          "--tw-prose-links": theme("colors.primary.600"),
+          "--tw-prose-links-hover": theme("colors.primary.700"),
           "--tw-prose-underline": theme("colors.primary.500 / 0.2"),
           "--tw-prose-underline-hover": theme("colors.primary.500"),
           "--tw-prose-bold": theme("colors.zinc.900"),
@@ -68,6 +68,12 @@ module.exports = {
           p: {
             marginTop: theme("spacing.7"),
             marginBottom: theme("spacing.7"),
+          },
+          "[class~='lead']": {
+            fontSize: theme("fontSize.xl")[0],
+            lineHeight: theme("lineHeight.7"),
+            marginTop: theme("spacing.12"),
+            marginBottom: theme("spacing.8"),
           },
 
           // Headings
@@ -139,10 +145,13 @@ module.exports = {
 
           // Quotes
           blockquote: {
+            color: theme("colors.zinc.500"),
             paddingLeft: theme("spacing.6"),
             borderLeftWidth: theme("borderWidth.2"),
             borderLeftColor: "var(--tw-prose-quote-borders)",
-            fontStyle: "italic",
+          },
+          "blockquote strong": {
+            color: theme("colors.zinc.600"),
           },
 
           // Figures

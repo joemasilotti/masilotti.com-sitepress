@@ -1,7 +1,6 @@
 <% if href %>
   <%= content_tag :a, href:, class: class_name, **properties do %>
     <%= content %>
-
     <% if icon %>
       <%= inline_svg "icons/#{icon}.svg", class: "ml-1 -mr-1 h-5 w-5" %>
     <% end %>
