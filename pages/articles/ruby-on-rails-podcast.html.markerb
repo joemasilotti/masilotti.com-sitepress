@@ -15,6 +15,13 @@ We also touched on my upcoming workshop, How to port your Rails app to iOS with 
 
 Have a listen on your favorite podcast player or directly on their site.
 
+<div class="not-prose">
+  <a href="https://www.therubyonrailspodcast.com/413" class="no-underline inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+    <%= inline_svg "icons/solid/play_circle.svg", class: "-ml-1 mr-3 h-6 w-6" %>
+    Listen to episode 413
+  </a>
+</div>
+
 <%= render Button.new(href: "https://www.therubyonrailspodcast.com/413", icon: "solid/play_circle") do %>
   Listen to episode 413
 <% end %>
