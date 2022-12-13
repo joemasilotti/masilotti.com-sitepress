@@ -21,13 +21,17 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
     [:fenced_code_blocks]
   end
 
-  # Inline newsletter CTA: `![Subscribe!](cta://newsletter)`
+  # Newsletter CTA: `![Subscribe!](cta://newsletter)`
+  # Button-styled link: `![Click me!](button://solid/play_circle "https://example.com")`
   def image(link, title, alt_text)
     url = URI.parse(link)
 
     case url.scheme
     when "cta"
       render partial: File.join("partials/ctas/#{url.host}"), locals: {title: alt_text}
+    when "button"
+      render partial: File.join("partials/ctas/button"),
+        locals: {title: alt_text, icon: url.host + url.path, href: title}
     else
       render Figure.new(link, alt: alt_text, title:)
     end
