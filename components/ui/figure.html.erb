@@ -1,4 +1,10 @@
 <figure>
-  <%= image_tag src, alt:, title: %>
-  <figcaption><%= title || alt %></figcaption>
+  <%= image_tag src, alt: title %>
+  <figcaption>
+    <% if href.present? %>
+      <%= link_to title, href %>
+    <% else %>
+      <%= title %>
+    <% end %>
+  </figcaption>
 </figure>

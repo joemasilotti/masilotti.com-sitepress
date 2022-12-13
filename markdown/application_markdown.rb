@@ -33,7 +33,7 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
       render partial: File.join("partials/ctas/button"),
         locals: {title: alt_text, icon: url.host + url.path, href: title}
     else
-      render Figure.new(link, alt: alt_text, title:)
+      render UI::Figure.new(link, title: alt_text, href: title)
     end
   end
 

@@ -22,7 +22,7 @@ This means you don’t have to recreate every screen in native Swift. You can re
 
 Using Turbo Native meant that we can leverage all of the existing screens, design decisions, Rails controllers, domain logic, and more. Without having to duplicate anything in Swift. If it works on the web it will work in the app.
 
-<%= render Figure.new("hotwire.png", caption: "Hotwire - HTML over the wire") %>
+![Hotwire - HTML over the wire](articles/hotwire.png)
 
 ## Existing mobile web screens
 
@@ -60,9 +60,7 @@ The first working build I released to TestFlight took less than 2 weeks. All it 
 
 I also upstream generalized changes into the template when working with clients. Code optimizations, bug fixes, and new features get added at a regular cadence. Everything is extracted from real world situations – just like Rails!
 
-<div="no-prose">
-  <%= render Figure.new("jumpstart-pro-ios.png", caption: "Jumpstart Pro iOS template", href: "https://jumpstartrails.com/ios") %>
-</div>
+![Jumpstart Pro iOS template](articles/jumpstart-pro-ios.png "https://jumpstartrails.com/ios")
 
 ## Short, async feedback loops
 
@@ -78,7 +76,7 @@ The first App Store submission was rejected. The Rails site uses Google Analytic
 
 I push clients to submit as early as possible to catch situations like this. From my experience, the App Store review team usually responds within 48 hours. But if you need to go back and forth a few times that can quickly add up.
 
-<%= render Figure.new("zero-to-app-store.png", caption: "App Store approval!") %>
+![App Store approval!](articles/zero-to-app-store.png)
 
 ## More on Turbo Native
 
