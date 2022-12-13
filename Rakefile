@@ -6,9 +6,7 @@ end
 desc "Compile the sitepress site"
 task :compile do
   ENV["NODE_ENV"] = "production"
-  sh "yarn run build:css"
-  sh "yarn run build:js"
-
+  sh "yarn run build"
   sh "bundle exec sitepress compile"
 end
 

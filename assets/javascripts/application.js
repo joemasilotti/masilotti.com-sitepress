@@ -1,7 +1,12 @@
-import { Application } from "@hotwired/stimulus"
+function ready() {
+  const buttons = document.querySelectorAll("#menu-close-button, #menu-open-button")
+  const content = document.querySelector("#menu-content")
 
-import ToggleController from "./controllers/toggle_controller"
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      content.classList.toggle("hidden")
+    });
+  });
+}
 
-window.Stimulus = Application.start()
-
-Stimulus.register("toggle", ToggleController)
+document.addEventListener("DOMContentLoaded", ready)
