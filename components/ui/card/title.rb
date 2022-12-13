@@ -1,4 +1,4 @@
-class Card::Title < ViewComponent::Base
+class UI::Card::Title < ViewComponent::Base
   attr_reader :as, :href
 
   def initialize(as: "h2", href: nil)

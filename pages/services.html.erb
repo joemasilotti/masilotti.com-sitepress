@@ -9,7 +9,7 @@ description: |
 
 <% services = data(:services) %>
 
-<%= render SimpleLayout.new(
+<%= render UI::SimpleLayout.new(
   title: current_page.data["title"],
   intro: current_page.data["description"]
 ) do %>

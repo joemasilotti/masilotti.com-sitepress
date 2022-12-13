@@ -1,4 +1,4 @@
-class Card::Link < ViewComponent::Base
+class UI::Card::Link < ViewComponent::Base
   attr_reader :href, :options
 
   def initialize(href, options: {})

@@ -1,26 +1,26 @@
 <%= content_tag :article, class: ["md:grid md:grid-cols-4 md:items-baseline": wide] do %>
-  <%= render Card.new(class_name: class_names("md:col-span-3": wide)) do %>
-    <%= render Card::Title.new(href: article.request_path) do %>
+  <%= render UI::Card.new(class_name: class_names("md:col-span-3": wide)) do %>
+    <%= render UI::Card::Title.new(href: article.request_path) do %>
       <%= article.title %>
     <% end %>
 
     <% unless hide_date %>
-      <%= render Card::Eyebrow.new(as: "time", decorate: true, class_name: class_names("md:hidden": wide), properties: {datetime: article.date}) do %>
+      <%= render UI::Card::Eyebrow.new(as: "time", decorate: true, class_name: class_names("md:hidden": wide), properties: {datetime: article.date}) do %>
         <%= article.formatted_date %>
       <% end %>
     <% end %>
 
-    <%= render Card::Description.new do %>
+    <%= render UI::Card::Description.new do %>
       <%= article.description %>
     <% end %>
 
-    <%= render Card::Cta.new do %>
+    <%= render UI::Card::CTA.new do %>
       Read article
     <% end %>
   <% end %>
 
   <% if wide && !hide_date %>
-    <%= render Card::Eyebrow.new(as: "time", class_name: "mt-1 hidden md:block", properties: {datetime: article.date}) do %>
+    <%= render UI::Card::Eyebrow.new(as: "time", class_name: "mt-1 hidden md:block", properties: {datetime: article.date}) do %>
       <%= article.formatted_date %>
     <% end %>
   <% end %>

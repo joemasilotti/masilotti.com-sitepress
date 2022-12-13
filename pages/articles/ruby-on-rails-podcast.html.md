@@ -15,8 +15,9 @@ We also touched on my upcoming workshop, How to port your Rails app to iOS with 
 
 Have a listen on your favorite podcast player or directly on their site.
 
+<!-- TODO: Move to markdown "shortcut". -->
 <div class="not-prose">
-  <%= render Button.new(
+  <%= render UI::Button.new(
     title: "Listen to episode 413",
     href: "https://www.therubyonrailspodcast.com/413",
     icon: "solid/play_circle"

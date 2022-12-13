@@ -1,4 +1,4 @@
-class Navigation::Item < ViewComponent::Base
+class UI::Navigation::Item < ViewComponent::Base
   attr_reader :title, :href, :request_path
 
   def initialize(title, href, request_path:)

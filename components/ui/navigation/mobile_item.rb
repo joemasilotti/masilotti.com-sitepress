@@ -1,4 +1,4 @@
-class Navigation::MobileItem < ViewComponent::Base
+class UI::Navigation::MobileItem < ViewComponent::Base
   attr_reader :title, :href
 
   def initialize(title, href)

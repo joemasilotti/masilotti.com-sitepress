@@ -1,4 +1,4 @@
-class Header < ViewComponent::Base
+class UI::Header < ViewComponent::Base
   attr_reader :request_path, :large_avatar
 
   def initialize(request_path:, large_avatar: false)

@@ -6,24 +6,24 @@ description: I’ve worked on tons of little projects over the years but these a
 
 <% projects = data(:projects) %>
 
-<%= render SimpleLayout.new(
+<%= render UI::SimpleLayout.new(
   title: current_page.data["title"],
   intro: current_page.data["description"]
 ) do %>
   <ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
     <% projects.each do |project| %>
-      <%= render Card.new(as: "li") do %>
+      <%= render UI::Card.new(as: "li") do %>
         <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
           <%= image_tag "projects/#{project.logo}", alt: project.name, class: "h-12 w-12 rounded-full" %>
         </div>
 
         <h2 class="mt-6 text-base font-semibold text-zinc-800">
-          <%= render Card::Link.new(project.link.href, options: {target: "_blank"}) do %>
+          <%= render UI::Card::Link.new(project.link.href, options: {target: "_blank"}) do %>
             <%= project.name %>
           <% end %>
         </h2>
 
-        <%= render Card::Description.new do %>
+        <%= render UI::Card::Description.new do %>
           <%= project.description %>
         <% end %>
 

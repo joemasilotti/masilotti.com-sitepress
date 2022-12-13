@@ -1,25 +1,25 @@
-<%= render Card.new(as: "li") do %>
-  <%= render Card::Title.new(as: "h3", href:) do %>
+<%= render UI::Card.new(as: "li") do %>
+  <%= render UI::Card::Title.new(as: "h3", href:) do %>
     <%= title %>
   <% end %>
 
-  <%= render Card::Description.new do %>
+  <%= render UI::Card::Description.new do %>
     <span class="font-semibold">Best if</span> <%= best_if %>
   <% end %>
 
-  <%= render Card::Description.new do %>
+  <%= render UI::Card::Description.new do %>
     <span class="font-semibold">You get</span> <%= you_get %>
   <% end %>
 
-  <%= render Card::Description.new do %>
+  <%= render UI::Card::Description.new do %>
     <span class="font-semibold">Price</span>: <%= price %>
   <% end %>
 
-  <%= render Card::Description.new do %>
+  <%= render UI::Card::Description.new do %>
     <%= description %>
   <% end %>
 
-  <%= render Card::Cta.new do %>
+  <%= render UI::Card::CTA.new do %>
     Email Joe to get started
   <% end %>
 <% end %>

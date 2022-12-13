@@ -1,4 +1,4 @@
-class Card < ViewComponent::Base
+class UI::Card < ViewComponent::Base
   attr_reader :as, :class_name
 
   def initialize(as: :div, class_name: nil)

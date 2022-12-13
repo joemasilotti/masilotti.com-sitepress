@@ -1,4 +1,4 @@
-class Navigation::Desktop < ViewComponent::Base
+class UI::Navigation::Desktop < ViewComponent::Base
   attr_reader :request_path
 
   def initialize(request_path:)

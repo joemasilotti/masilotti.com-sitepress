@@ -17,7 +17,7 @@
     </div>
 
     <div class="relative">
-      <%= render Header.new(request_path: current_page.request_path, large_avatar: current_page.data["large_nav_avatar"]) %>
+      <%= render UI::Header.new(request_path: current_page.request_path, large_avatar: current_page.data["large_nav_avatar"]) %>
 
       <main>
         <%= yield %>

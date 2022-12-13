@@ -1,14 +1,14 @@
 <%= content_tag :article, class: "md:grid md:grid-cols-4 md:items-baseline" do %>
-  <%= render Card.new(class_name: "md:col-span-3") do %>
-    <%= render Card::Title.new(href: newsletter.request_path) do %>
+  <%= render UI::Card.new(class_name: "md:col-span-3") do %>
+    <%= render UI::Card::Title.new(href: newsletter.request_path) do %>
       <%= newsletter.edition %>
     <% end %>
 
-    <%= render Card::Description.new do %>
+    <%= render UI::Card::Description.new do %>
       <%= newsletter.description %>
     <% end %>
 
-    <%= render Card::Cta.new do %>
+    <%= render UI::Card::CTA.new do %>
       Read edition
     <% end %>
   <% end %>

@@ -1,4 +1,4 @@
-class Avatar < ViewComponent::Base
+class UI::Avatar < ViewComponent::Base
   attr_reader :large
 
   def initialize(large: false)

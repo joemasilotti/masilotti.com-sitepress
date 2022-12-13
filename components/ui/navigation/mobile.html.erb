@@ -18,10 +18,10 @@
 
       <nav class="mt-6">
         <ul class="-my-2 divide-y divide-zinc-100 text-base text-zinc-800">
-          <%= render Navigation::MobileItem.new("About", "/") %>
-          <%= render Navigation::MobileItem.new("Articles", page_path("articles")) %>
-          <%= render Navigation::MobileItem.new("Services", page_path("services")) %>
-          <%= render Navigation::MobileItem.new("Projects", page_path("projects")) %>
+          <%= render UI::Navigation::MobileItem.new("About", "/") %>
+          <%= render UI::Navigation::MobileItem.new("Articles", page_path("articles")) %>
+          <%= render UI::Navigation::MobileItem.new("Services", page_path("services")) %>
+          <%= render UI::Navigation::MobileItem.new("Projects", page_path("projects")) %>
         </ul>
       </nav>
     </div>

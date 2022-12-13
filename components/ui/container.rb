@@ -1,4 +1,4 @@
-class Container < ViewComponent::Base
+class UI::Container < ViewComponent::Base
   attr_reader :class_name
 
   def initialize(class_name: nil)
