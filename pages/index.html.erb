@@ -21,18 +21,18 @@ description: I help businesses build and launch hybrid iOS apps powered by Turbo
       <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">I'm <%= current_page.data["title"] %>.</h1>
 
       <div class="prose">
-        <%= render partial: "partials/about" %>
+        <%= render "partials/about" %>
       </div>
     </div>
 
     <div class="lg:pl-20">
       <ul role="list">
-        <%= render WideSocialLink.new(href: socials.email.url, label: socials.email.handle, icon: socials.email.icon) %>
+        <%= render WideSocialLink.new(href: socials.email.href, label: socials.email.handle, icon: socials.email.icon) %>
 
-        <%= render WideSocialLink.new(href: socials.twitter.url, label: socials.twitter.title, icon: socials.twitter.icon, class_name: "mt-8 border-t border-zinc-100 pt-8") %>
-        <%= render WideSocialLink.new(href: socials.github.url, label: socials.github.title, icon: socials.github.icon, class_name: "mt-4") %>
-        <%= render WideSocialLink.new(href: socials.mastodon.url, label: socials.mastodon.title, icon: socials.mastodon.icon, class_name: "mt-4") %>
-        <%= render WideSocialLink.new(href: socials.linkedin.url, label: socials.linkedin.title, icon: socials.linkedin.icon, class_name: "mt-4") %>
+        <%= render WideSocialLink.new(href: socials.twitter.href, label: socials.twitter.title, icon: socials.twitter.icon, class_name: "mt-8 border-t border-zinc-100 pt-8") %>
+        <%= render WideSocialLink.new(href: socials.github.href, label: socials.github.title, icon: socials.github.icon, class_name: "mt-4") %>
+        <%= render WideSocialLink.new(href: socials.mastodon.href, label: socials.mastodon.title, icon: socials.mastodon.icon, class_name: "mt-4") %>
+        <%= render WideSocialLink.new(href: socials.linkedin.href, label: socials.linkedin.title, icon: socials.linkedin.icon, class_name: "mt-4") %>
       </ul>
     </div>
   </div>

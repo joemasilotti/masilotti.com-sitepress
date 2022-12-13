@@ -21,7 +21,7 @@ description: |
         </div>
 
         <h2 class="mt-6 text-base font-semibold text-zinc-800">
-          <%= render UI::Card::Link.new(project.link.href, options: {target: "_blank"}) do %>
+          <%= render UI::Card::Link.new(project.link.href) do %>
             <%= project.name %>
           <% end %>
         </h2>

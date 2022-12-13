@@ -1,25 +1,25 @@
 email:
   handle: joe@masilotti.com
   title: Email Joe
-  url: mailto:joe@masilotti.com
+  href: mailto:joe@masilotti.com
   icon: solid/envelope
 twitter:
   handle: joemasilotti
   title: Follow on Twitter
-  url: https://twitter.com/joemasilotti
+  href: https://twitter.com/joemasilotti
   icon: twitter
 github:
   handle: joemasilotti
   title: Follow on GitHub
-  url: https://github.com/joemasilotti
+  href: https://github.com/joemasilotti
   icon: github
 mastodon:
   handle: joemasilotti
   title: Follow on Mastodon
-  url: https://ruby.social/@joemasilotti
+  href: https://ruby.social/@joemasilotti
   icon: mastodon
 linkedin:
   handle: joemasilotti
   title: Follow on LinkedIn
-  url: https://www.linkedin.com/in/joemasilotti
+  href: https://www.linkedin.com/in/joemasilotti
   icon: linkedin
