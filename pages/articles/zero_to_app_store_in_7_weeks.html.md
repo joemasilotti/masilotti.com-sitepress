@@ -60,7 +60,9 @@ The first working build I released to TestFlight took less than 2 weeks. All it 
 
 I also upstream generalized changes into the template when working with clients. Code optimizations, bug fixes, and new features get added at a regular cadence. Everything is extracted from real world situations – just like Rails!
 
-<%= render Figure.new("jumpstart-pro-ios.png", caption: "Jumpstart Pro iOS template", href: "https://jumpstartrails.com/ios") %>
+<div="no-prose">
+  <%= render Figure.new("jumpstart-pro-ios.png", caption: "Jumpstart Pro iOS template", href: "https://jumpstartrails.com/ios") %>
+</div>
 
 ## Short, async feedback loops
 

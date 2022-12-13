@@ -29,33 +29,33 @@ Originally a paid server, GoRails recently went free with a very active communit
 
 WNB.rb is a virtual community for women and non-binary Rubyists. They host monthly meetups powered by a Slack community of 350+ members. There’s also a CFP working group where you can have experienced speakers review your conference proposal. A huge shoutout to Jemma and Emily for running such an amazing community!
 
-<%= render partial: "partials/newsletter" %>
+![Subscribe to my newsletter!](cta://newsletter)
 
-### [Stimulus Reflex Discord server](https://discord.gg/z5fuJNgJsS)
+## [Stimulus Reflex Discord server](https://discord.gg/z5fuJNgJsS)
 
 Another active Discord community focusing on Ruby on Rails. This is my go-to support channel for [Stimulus Reflex](https://docs.stimulusreflex.com), Cable Ready, and [AnyCable](https://anycable.io). The maintainers are quick to respond with help on specific questions on the frameworks and gems. And the more general channels see a lot of Q&A style activity for folks getting help with their individual codebases.
 
-### [Ruby on Rails Link Slack](https://www.rubyonrails.link)
+## [Ruby on Rails Link Slack](https://www.rubyonrails.link)
 
 This is the biggest private community of the bunch at over 18k members. There are 28 channels including opportunities for jobs, a place to post your latest blog, and even a dedicated channel for front-end development. Members range from avid OSS contributors, full-stack engineers, startup founders, backend engineers, and people just learning Ruby on Rails.
 
-### [Kasper helps your Ruby & Rails Discord server](https://discord.gg/T6u7xRfpt6)
+## [Kasper helps your Ruby & Rails Discord server](https://discord.gg/T6u7xRfpt6)
 
 [Kasper Timm Hansen](https://twitter.com/kaspth), a previous Rails core member, started this server not too long ago. The focus, as you might expect from the name, is on helping individuals with their Ruby and Rails questions. While a bit smaller and less active than the others, there’s high quality content getting posted regularly here. My favorite channels are #find-a-pair and #domain-modeling-for-my-app.
 
-### [Official Ruby on Rails forum](https://discuss.rubyonrails.org)
+## [Official Ruby on Rails forum](https://discuss.rubyonrails.org)
 
 Hosted on Discuss, this is a more traditional message board than a live chat experience. The upsides are that everything is archived which makes searching for an existing question or answer much easier. But if you are looking for immediate help a Discord or Slack might be a better fit to ask your question. You can also follow along with all the new feature proposals to the Ruby on Rails framework.
 
-### [Official Hotwire Discussion](https://discuss.hotwired.dev)
+## [Official Hotwire Discussion](https://discuss.hotwired.dev)
 
 Another Discuss community but focused specifically on the Hotwire stack. This forum is an excellent resource for asking questions about the less documented features of Turbo. I've seen more success in posting here than an issue on GitHub if you are looking for a quick response.
 
-### [Ruby on Rails subreddit #1](https://www.reddit.com/r/rails/) and [Ruby on Rails subreddit #2](https://www.reddit.com/r/rubyonrails/)
+## [Ruby on Rails subreddit #1](https://www.reddit.com/r/rails/) and [Ruby on Rails subreddit #2](https://www.reddit.com/r/rubyonrails/)
 
 Totaling 75k members, these subreddits have grown quite large. As always with Reddit, the quality of content varies drastically. I don’t recommend using these for help or asking questions. But they do serve as a valuable resource for staying up to date on the latest Rails releases, open source gems, and community blog posts.
 
-### [Ruby on Rails Twitter community](https://twitter.com/i/communities/1498390597530537984)
+## [Ruby on Rails Twitter community](https://twitter.com/i/communities/1498390597530537984)
 
 Twitter communities are like super focused newsfeeds. Content on The Ruby on Rails Twitter community focuses on sharing articles, asking for advice, and highlighting interesting gems. It’s a great alternative if you aren’t a fan of Reddit.
 

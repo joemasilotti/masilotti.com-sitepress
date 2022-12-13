@@ -157,18 +157,11 @@ module.exports = {
           // Figures
           figcaption: {
             color: "var(--tw-prose-captions)",
-            fontSize: theme("fontSize.sm")[0],
             lineHeight: theme("lineHeight.6"),
             marginTop: theme("spacing.3"),
           },
           "figcaption > p": {
             margin: 0,
-          },
-          "figure a figcaption": {
-            textDecoration: "underline"
-          },
-          "figure a:hover figcaption": {
-            color: theme("colors.zinc.500"),
           },
 
           // Lists

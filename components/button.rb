@@ -1,14 +1,14 @@
 class Button < ViewComponent::Base
-  attr_reader :href, :icon, :properties
+  attr_reader :title, :href, :icon, :properties
 
-  def initialize(variant = :primary, href: nil, icon: nil, class_name: nil, properties: {})
-    @variant, @href, @icon, @class_name, @properties =
-      variant, href, icon, class_name, properties
+  def initialize(variant = :primary, title: nil, href: nil, icon: nil, class_name: nil, properties: {})
+    @variant, @title, @href, @icon, @class_name, @properties =
+      variant, title, href, icon, class_name, properties
   end
 
   def class_name
     [
-      "inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none",
+      "inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none no-underline",
       variant_class_name[variant],
       @class_name
     ]

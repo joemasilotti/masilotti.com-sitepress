@@ -1,7 +1,7 @@
 class Figure < ViewComponent::Base
-  attr_reader :src, :caption, :href, :options
+  attr_reader :src, :alt, :title
 
-  def initialize(src, caption:, href: nil, **options)
-    @src, @caption, @href, @options = src, caption, href, options
+  def initialize(src, alt:, title:)
+    @src, @alt, @title = src, alt, title
   end
 end

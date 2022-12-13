@@ -1,0 +1,19 @@
+---
+title: The ⚡️ Hotwire dev newsletter
+description: |
+  Turbo (Native), Stimulus, and Strada articles, code, courses, and more. Plus,
+  exclusive insights into how I build Turbo Native apps. Delivered monthly.
+
+---
+
+<%= render SimpleLayout.new(
+  title: current_page.data["title"],
+  intro: current_page.data["description"],
+  newsletter: true
+) do %>
+  <div class="flex max-w-3xl flex-col space-y-16">
+    <% NewsletterPage.all.each do |newsletter| %>
+      <%= render Newsletter.new(newsletter) %>
+    <% end %>
+  </div>
+<% end %>

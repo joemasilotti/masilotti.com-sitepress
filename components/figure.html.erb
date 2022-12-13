@@ -1,17 +1,4 @@
-<% if href.present? %>
-  <%= link_to href do %>
-    <figure>
-      <%= image_tag src, alt: caption, **options %>
-      <figcaption class="flex items-center">
-        <%= caption %>
-        <%# Why is this trailing </svg> tag needed so the layout doesn't break? %>
-        <%= inline_svg "icons/mini/link.svg", class: "h-4 w-4 ml-1.5" %></svg>
-      </figcaption>
-    </figure>
-  <% end %>
-<% else %>
-  <figure>
-    <%= image_tag src, alt: caption, **options %>
-    <figcaption><%= caption %></figcaption>
-  </figure>
-<% end %>
+<figure>
+  <%= image_tag src, alt:, title: %>
+  <figcaption><%= title || alt %></figcaption>
+</figure>

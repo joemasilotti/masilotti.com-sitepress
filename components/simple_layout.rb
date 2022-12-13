@@ -1,7 +1,7 @@
 class SimpleLayout < ViewComponent::Base
-  attr_reader :title, :intro
+  attr_reader :title, :intro, :newsletter
 
-  def initialize(title:, intro:)
-    @title, @intro = title, intro
+  def initialize(title:, intro:, newsletter: false)
+    @title, @intro, @newsletter = title, intro, newsletter
   end
 end

@@ -1,0 +1,47 @@
+<% newsletter = NewsletterPage.new(current_page) %>
+
+<%= render_layout "layout" do %>
+  <%= render Container.new(class_name: "mt-16 lg:mt-32") do %>
+    <div class="xl:relative">
+      <div class="mx-auto max-w-2xl">
+        <a href="/hotwire" aria-label="Go back to all editions" title="Go back to all editions" class="group mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0">
+          <%= inline_svg "icons/mini/arrow_left.svg", class: "h-3 w-3 stroke-zinc-500 transition group-hover:stroke-zinc-700" %>
+        </a>
+
+        <article>
+          <header class="flex flex-col">
+            <h1 class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
+              ⚡️ Hotwire dev newsletter
+              <span class="sr-only"><%= newsletter.edition %></span>
+            </h1>
+
+            <time datetime="<%= newsletter.date %>" class="order-first flex items-center text-base text-zinc-400">
+              <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span>
+              <span class="ml-3"><%= newsletter.edition %></span>
+            </time>
+          </header>
+
+          <form action="/thank-you" class="mt-8 mb-24">
+            <p class="mt-2 sm:mt-4 sm:text-lg text-zinc-600">
+            <span class="md:block">Turbo (Native), Stimulus, and Strada articles, code, courses, and more.</span>
+            <span class="md:block">Plus <span class="font-semibold">exclusive insights</span> into how I build Turbo Native apps. Delivered monthly.</span>
+            </p>
+
+            <div class="mt-6 sm:mt-8 flex">
+              <input type="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" class="min-w-0 max-w-xs flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600/10 sm:text-sm">
+              <%= render Button.new(class_name: "ml-4 flex-none") do %>
+                Subscribe
+              <% end %>
+            </div>
+          </form>
+
+          <%= content_tag "div", class: "prose prose-h3:mb-1 mt-8" do %>
+            <%= yield %>
+          <% end %>
+
+          <%= render partial: "partials/newsletter/signature" %>
+        </article>
+      </div>
+    </div>
+  <% end %>
+<% end %>

@@ -1,27 +1,27 @@
 - name: RailsDevs
-  description: Creating technology to empower civilians to explore space on their own terms.
+  description: The reverse job board exclusively for Ruby on Rails developers. An open source app.
   link:
-    href: "#"
+    href: https://railsdevs.com
     label: railsdevs.com
-  logo: ""
+  logo: railsdevs.png
 
 - name: ⚡️ Hotwire dev newsletter
-  description: Creating technology to empower civilians to explore space on their own terms.
+  description: Monthly link roundup of the latest Hotwire articles, code, courses, and more.
   link:
-    href: "#"
+    href: /hotwire
     label: masilotti.com
-  logo: ""
-
-- name: Jumpstart Pro iOS
-  description: Creating technology to empower civilians to explore space on their own terms.
-  link:
-    href: "#"
-    label: jumpstartrails.com
-  logo: ""
+  logo: newsletter.png
 
 - name: Turbo Native workshop
-  description: High performance web animation library, hand-written in optimized WASM.
+  description: Learn how to use the native iOS Turbo wrapper to build high-fidelity hybrid apps.
   link:
-    href: "#"
+    href: /turbo-native-workshop
     label: masilotti.com
-  logo: ""
+  logo: workshop.png
+
+- name: Jumpstart Pro iOS
+  description: An iOS template to supercharge your Rails application with easy native integration.
+  link:
+    href: https://jumpstartrails.com/ios
+    label: jumpstartrails.com
+  logo: jumpstart.png

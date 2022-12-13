@@ -1,24 +1,21 @@
 ---
-title: Services
+title: Need a hand with your Turbo Native app? I'd love to help.
+description: |
+  I've been working with Turbo Native since 2015. Since then I've helped half
+  a dozen businesses launch in the App Store and consulted for twice as many.
+  Here's how I can help you port your Rails app to iOS with Turbo Native.
 
 ---
 
 <% services = data(:services) %>
 
 <%= render SimpleLayout.new(
-  title: "Software I use, gadgets I love, and other things I recommend.",
-  intro: "I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+  title: current_page.data["title"],
+  intro: current_page.data["description"]
 ) do %>
-  <div class="space-y-20">
-    <%= render Toolbox::Section.new("Workstation") do %>
-      <% services.workstation.each do |tool| %>
-        <%= render Toolbox::Tool.new(**tool.to_h) %>
-      <% end %>
+  <div class="flex max-w-xl flex-col space-y-16">
+    <% services.each do |service| %>
+      <%= render Service.new(**service.to_h.merge(href: data(:socials).email.url)) %>
     <% end %>
-
-  <%= render Toolbox::Section.new("Development tools") do %>
-    <% services.development_tools.each do |tool| %>
-      <%= render Toolbox::Tool.new(**tool.to_h) %>
-    <% end %>
-  <% end %>
+  </div>
 <% end %>
