@@ -8,6 +8,6 @@ class EmailCapture < ViewComponent::Base
   end
 
   def newsletter
-    @newsletter ||= data(:newsletters).hotwire
+    @newsletter ||= data.newsletters.hotwire
   end
 end

@@ -7,14 +7,12 @@ description: |
 
 ---
 
-<% projects = data(:projects) %>
-
 <%= render UI::SimpleLayout.new(
-  title: current_page.data["title"],
-  intro: current_page.data["description"]
+  title: current_page.data.title,
+  intro: current_page.data.description
 ) do %>
   <ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-    <% projects.each do |project| %>
+    <% data.projects.each do |project| %>
       <%= render UI::Card.new(as: "li") do %>
         <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
           <%= image_tag "projects/#{project.logo}", alt: project.name, class: "h-12 w-12 rounded-full" %>

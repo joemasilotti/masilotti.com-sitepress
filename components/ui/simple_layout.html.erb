@@ -10,7 +10,7 @@
   </header>
 
   <% if newsletter %>
-    <%= render EmailCapture.new %>
+    <%= render EmailCapture.new(newsletter) %>
   <% end %>
 
   <div class="mt-16 sm:mt-20">

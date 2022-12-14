@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/sitepress/sitepress.git
-  revision: c3d17262ce344f0681c0c9fdb3c6797e37750e64
-  branch: yaml-permitted-classes
+  remote: https://github.com/joemasilotti/sitepress.git
+  revision: 5fab20646a5ef31093e682ec1d8889c7287e9e26
+  branch: version-4-fix-data-each
   specs:
     sitepress (3.2.0)
       sitepress-cli (= 3.2.0)

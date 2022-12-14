@@ -7,15 +7,13 @@ description: |
 
 ---
 
-<% services = data(:services) %>
-
 <%= render UI::SimpleLayout.new(
   title: current_page.data["title"],
   intro: current_page.data["description"]
 ) do %>
   <div class="flex max-w-xl flex-col space-y-16">
-    <% services.each do |service| %>
-      <%= render Service.new(**service.to_h.merge(href: data(:socials).email.url)) %>
+    <% data.services.each do |service| %>
+      <%= render Service.new(**service.to_h.to_options.merge(href: data.socials.email.url)) %>
     <% end %>
   </div>
 <% end %>

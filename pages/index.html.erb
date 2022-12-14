@@ -4,8 +4,6 @@ description: I help businesses build and launch hybrid iOS apps powered by Turbo
 
 ---
 
-<% socials = data(:socials) %>
-
 <%= render UI::Container.new(class_name: "mt-16 sm:mt-32") do %>
   <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
     <div class="lg:pl-20">
@@ -27,12 +25,12 @@ description: I help businesses build and launch hybrid iOS apps powered by Turbo
 
     <div class="lg:pl-20">
       <ul role="list">
-        <%= render WideSocialLink.new(href: socials.email.href, label: socials.email.handle, icon: socials.email.icon) %>
+        <%= render WideSocialLink.new(href: data.socials.email.href, label: data.socials.email.handle, icon: data.socials.email.icon) %>
 
-        <%= render WideSocialLink.new(href: socials.twitter.href, label: socials.twitter.title, icon: socials.twitter.icon, class_name: "mt-8 border-t border-zinc-100 pt-8") %>
-        <%= render WideSocialLink.new(href: socials.github.href, label: socials.github.title, icon: socials.github.icon, class_name: "mt-4") %>
-        <%= render WideSocialLink.new(href: socials.mastodon.href, label: socials.mastodon.title, icon: socials.mastodon.icon, class_name: "mt-4") %>
-        <%= render WideSocialLink.new(href: socials.linkedin.href, label: socials.linkedin.title, icon: socials.linkedin.icon, class_name: "mt-4") %>
+        <%= render WideSocialLink.new(href: data.socials.twitter.href, label: data.socials.twitter.title, icon: data.socials.twitter.icon, class_name: "mt-8 border-t border-zinc-100 pt-8") %>
+        <%= render WideSocialLink.new(href: data.socials.github.href, label: data.socials.github.title, icon: data.socials.github.icon, class_name: "mt-4") %>
+        <%= render WideSocialLink.new(href: data.socials.mastodon.href, label: data.socials.mastodon.title, icon: data.socials.mastodon.icon, class_name: "mt-4") %>
+        <%= render WideSocialLink.new(href: data.socials.linkedin.href, label: data.socials.linkedin.title, icon: data.socials.linkedin.icon, class_name: "mt-4") %>
       </ul>
     </div>
   </div>

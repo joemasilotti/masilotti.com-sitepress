@@ -7,9 +7,9 @@ description: |
 ---
 
 <%= render UI::SimpleLayout.new(
-  title: current_page.data["title"],
-  intro: current_page.data["description"],
-  newsletter: true
+  title: current_page.data.title,
+  intro: current_page.data.description,
+  newsletter: dataset(:newsletters).hotwire
 ) do %>
   <div class="flex max-w-3xl flex-col space-y-16">
     <% NewsletterPage.all.each do |newsletter| %>
