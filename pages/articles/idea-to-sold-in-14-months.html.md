@@ -5,6 +5,7 @@ description: |
   I built an MVP in one month and grew the product for a year. But now it’s
   time to pass the torch. It’s official, I sold Mugshot Bot! Here’s how it
   all went down.
+image: articles/idea-to-sold-in-14-months.png
 layout: article
 favorite: true
 index: 2

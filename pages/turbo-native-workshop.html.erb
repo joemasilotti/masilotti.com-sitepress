@@ -3,21 +3,22 @@ title: Turbo Native workshop
 description: |
   Learn how to use the native iOS Turbo wrapper to build high-fidelity hybrid
   apps with native navigation in this 3-hour interactive workshop.
+image: pages/turbo-native-workshop.png
 
 ---
 
 <%= render UI::SimpleLayout.new(
-  title: current_page.data["title"],
-  intro: current_page.data["description"]
+  title: current_page.data.title,
+  intro: current_page.data.description
 ) do %>
   <div class="max-w-2xl prose">
     <%= render "partials/workshop" %>
   </div>
 
-  <%= render EmailCapture.new(data.newsletters.workshop) %>
+  <%= render EmailCapture.new(data.newsletters.workshop, cta: "Sign up") %>
   <small class="block mt-4">By signing up you’ll also be subscribed to the <%= link_to "Hotwire dev newsletter", "/hotwire", class: "underline" %>.</small>
 
-  <div class="prose mt-16">
-    P.S. Have questions about the workshop? <%= link_to "Send me an email", "mailto:joe@masilotti.com" %>!
+  <div class="prose">
+    <p>P.S. Have questions about the workshop? <%= link_to "Send me an email", "mailto:joe@masilotti.com" %>!</p>
   </div>
 <% end %>

@@ -5,6 +5,7 @@ description: |
   New record! I ported a client’s Ruby on Rails app to iOS and went live in
   the App Store in 7 weeks. Here's how I did it.
 layout: article
+image: articles/zero-to-app-store.png
 favorite: true
 index: 1
 

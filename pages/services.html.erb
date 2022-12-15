@@ -4,12 +4,13 @@ description: |
   I've been working with Turbo Native since 2015. Since then I've helped half
   a dozen businesses launch in the App Store and consulted for twice as many.
   Here's how I can help you port your Rails app to iOS with Turbo Native.
+image: pages/services.png
 
 ---
 
 <%= render UI::SimpleLayout.new(
-  title: current_page.data["title"],
-  intro: current_page.data["description"]
+  title: current_page.data.title,
+  intro: current_page.data.description
 ) do %>
   <div class="flex max-w-xl flex-col space-y-16">
     <% data.services.each do |service| %>

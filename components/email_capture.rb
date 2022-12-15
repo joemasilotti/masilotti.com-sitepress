@@ -1,10 +1,10 @@
 class EmailCapture < ViewComponent::Base
   include DataHelper
 
-  attr_reader :cta
+  attr_reader :cta, :class_name
 
-  def initialize(newsletter = nil, cta: "Subscribe")
-    @newsletter, @cta = newsletter, cta
+  def initialize(newsletter = nil, cta: "Subscribe", class_name: nil)
+    @newsletter, @cta, @class_name = newsletter, cta, class_name
   end
 
   def newsletter

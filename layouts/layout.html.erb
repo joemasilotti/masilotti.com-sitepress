@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" class="h-full antialiased">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= [current_page.data["title"], "Masilotti.com"].compact.join(" | ") %></title>
-    <%= tag.meta name: "description", content: current_page.data["description"] %>
-    <%= stylesheet_link_tag "build/site" %>
-    <%= javascript_include_tag "application" %>
+    <%= render "partials/head" %>
   </head>
 
   <body class="flex h-full flex-col bg-zinc-50">
