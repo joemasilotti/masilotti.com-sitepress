@@ -1,4 +1,6 @@
 module MetaHelper
+  delegate :page_url, to: "Rails.application.routes.url_helpers"
+
   def title
     [current_page.data.title, "Masilotti.com"].compact.join(" | ")
   end
@@ -8,7 +10,7 @@ module MetaHelper
   end
 
   def url
-    data.site.url + current_page.request_path
+    page_url(current_page.request_path.delete_prefix("/"))
   end
 
   def image
