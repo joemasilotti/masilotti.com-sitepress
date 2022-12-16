@@ -37,5 +37,6 @@ jobs:
           path: build/
           remote_host: ${{ secrets.REMOTE_HOST }}
           remote_key: ${{ secrets.REMOTE_KEY }}
+          remote_key_pass: ${{ secrets.REMOTE_KEY_PASS }}
           remote_path: ${{ secrets.REMOTE_PATH }}
           remote_user: ${{ secrets.REMOTE_USER }}
