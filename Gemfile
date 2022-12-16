@@ -1,8 +1,7 @@
 source "https://rubygems.org"
 
 # Stand-alone Sitepress server and compiler.
-# gem "sitepress", "~> 3.2", github: "sitepress/sitepress", branch: "version-4"
-gem "sitepress", "~> 3.2", github: "joemasilotti/sitepress", branch: "version-4-fix-data-each"
+gem "sitepress", "~> 3.2", github: "sitepress/sitepress", branch: "version-4"
 
 # Server used for the Sitepress preview server.
 gem "webrick"

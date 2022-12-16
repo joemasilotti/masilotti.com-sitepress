@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/joemasilotti/sitepress.git
-  revision: 5fab20646a5ef31093e682ec1d8889c7287e9e26
-  branch: version-4-fix-data-each
+  remote: https://github.com/sitepress/sitepress.git
+  revision: 072b9af63c6b40f393e50343428ad7c9afe7484f
+  branch: version-4
   specs:
     sitepress (3.2.0)
       sitepress-cli (= 3.2.0)
