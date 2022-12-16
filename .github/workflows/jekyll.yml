@@ -24,8 +24,6 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v1
-        with:
-          node-version: 14.20.1
 
       - name: Build site
         run: bundle exec rake compile
