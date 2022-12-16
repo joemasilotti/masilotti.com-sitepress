@@ -1,10 +1,14 @@
 ---
-title: Hybrid iOS apps with Turbo – Part 6: Tips and tricks
+title: "Hybrid iOS apps with Turbo – Part 6: Tips and tricks"
 date: 2021-05-13
 description: |
   Tips and tricks I’ve picked up over the years that help make the app feel
   more native and development easier.
 layout: article
+
+series: Hybrid iOS apps with Turbo
+series_title: "Part 6: Tips and tricks"
+series_path: /turbo-ios
 
 ---
 

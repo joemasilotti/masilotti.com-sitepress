@@ -1,10 +1,14 @@
 ---
-title: Hybrid iOS apps with Turbo – Part 5: Native authentication
+title: "Hybrid iOS apps with Turbo – Part 5: Native authentication"
 date: 2021-04-02
 description: |
   Authenticated requests, how to share cookies, and Devise-specific helpers to
   implement native authentication.
 layout: article
+
+series: Hybrid iOS apps with Turbo
+series_title: "Part 5: Native authentication"
+series_path: /turbo-ios
 
 ---
 

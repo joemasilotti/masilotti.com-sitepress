@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sitepress/sitepress.git
-  revision: 072b9af63c6b40f393e50343428ad7c9afe7484f
+  revision: 58f6432afa9562ef151a09aa53d05c126437a04f
   branch: version-4
   specs:
     sitepress (3.2.0)
@@ -100,7 +100,7 @@ GEM
     inline_svg (1.8.0)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
-    loofah (2.19.0)
+    loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.8.0)
@@ -128,7 +128,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.9)
+    nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     pry (0.14.1)
@@ -155,8 +155,8 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.4.3)
-      loofah (~> 2.3)
+    rails-html-sanitizer (1.4.4)
+      loofah (~> 2.19, >= 2.19.1)
     railties (7.0.4)
       actionpack (= 7.0.4)
       activesupport (= 7.0.4)

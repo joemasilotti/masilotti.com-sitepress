@@ -1,10 +1,14 @@
 ---
-title: Hybrid iOS apps with Turbo – Part 4: The JavaScript bridge
+title: "Hybrid iOS apps with Turbo – Part 4: The JavaScript bridge"
 date: 2021-04-02
 description: |
   The JavaScript bridge is the intersection of client and server. It enables passing
   messages between the two worlds without waiting for someone to tap a link.
 layout: article
+
+series: Hybrid iOS apps with Turbo
+series_title: "Part 4: The JavaScript bridge"
+series_path: /turbo-ios
 
 ---
 

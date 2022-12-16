@@ -4,14 +4,19 @@
   <%= render UI::Container.new(class_name: "mt-16 lg:mt-32") do %>
     <div class="xl:relative">
       <div class="mx-auto max-w-2xl">
-        <a href="/articles" aria-label="Go back to articles" title="Go back to articles" class="group mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0">
+        <%= link_to article.back_href, "aria-label": "Go back to articles", title: "Go back to articles", class: "group mb-8 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0" do %>
           <%= inline_svg "icons/mini/arrow_left.svg", class: "h-3 w-3 stroke-zinc-500 transition group-hover:stroke-zinc-700" %>
-        </a>
+        <% end %>
 
         <article>
           <header class="flex flex-col">
-            <h1 class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
-              <%= article.title %>
+            <h1 class="mt-6 text-4xl sm:text-5xl font-bold tracking-tight text-zinc-800">
+              <% if article.series? %>
+                <span class="block text-3xl sm:text-4xl font-semibold text-zinc-500"><%= article.series %></span>
+                <span><%= article.series_title %></span>
+              <% else %>
+                <%= article.title %>
+              <% end %>
             </h1>
 
             <time datetime="<%= article.date %>" class="order-first flex items-center text-base text-zinc-400">

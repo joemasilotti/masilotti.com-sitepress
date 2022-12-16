@@ -1,5 +1,7 @@
 class ArticlePage < Sitepress::Model
-  data :title, :description, :date, :favorite, :index
+  data :title, :description, :date, # Required
+    :favorite, :index, # Optional
+    :series, :series_title, :series_path # Series
 
   def self.all
     site
@@ -17,5 +19,13 @@ class ArticlePage < Sitepress::Model
 
   def formatted_date
     date.strftime("%B %e, %Y")
+  end
+
+  def back_href
+    series_path || "/articles"
+  end
+
+  def series?
+    series.present?
   end
 end

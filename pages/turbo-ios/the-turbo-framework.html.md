@@ -1,10 +1,14 @@
 ---
-title: Hybrid iOS apps with Turbo – Part 1: The Turbo framework
+title: "Hybrid iOS apps with Turbo – Part 1: The Turbo framework"
 date: 2021-02-18
 description: |
   Hybrid mobile apps powered by Turbo: Basecamp's not-so-secret formula for
   producing large scale apps with small teams.
-layout: hotwire
+layout: article
+
+series: Hybrid iOS apps with Turbo
+series_title: "Part 1: The Turbo framework"
+series_path: /turbo-ios
 
 ---
 
