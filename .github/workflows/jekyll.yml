@@ -1,0 +1,40 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  NODE_ENV: production
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.16.0
+
+      - name: Build site
+        run: bundle exec rake compile
+
+      - name: Deploy site
+        uses: burnett01/rsync-deployments@5.1
+        with:
+          switches: -rtzq --progress --del
+          path: build/
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_key: ${{ secrets.REMOTE_KEY }}
+          remote_path: ${{ secrets.REMOTE_PATH }}
+          remote_user: ${{ secrets.REMOTE_USER }}

@@ -8,11 +8,12 @@ task :compile do
   ENV["NODE_ENV"] = "production"
   sh "yarn run build"
   sh "bundle exec sitepress compile"
+  sh "cp -r public/. build"
 end
 
 desc "Deploy to dev.masilotti.com"
 task deploy: [:clean, :compile] do
-  sh "rsync rsync -rtzq --progress build/ joemaz@masilotti.com:dev.masilotti.com"
+  sh "rsync -rtzq --progress --del build/ joemaz@masilotti.com:dev.masilotti.com"
 end
 
 task default: :deploy
