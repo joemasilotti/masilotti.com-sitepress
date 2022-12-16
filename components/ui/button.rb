@@ -1,7 +1,7 @@
 class UI::Button < ViewComponent::Base
   attr_reader :title, :href, :icon, :properties
 
-  def initialize(variant = :primary, title: nil, href: nil, icon: nil, class_name: nil, properties: {})
+  def initialize(variant = :primary, title: nil, href: nil, icon: nil, class_name: nil, **properties)
     @variant, @title, @href, @icon, @class_name, @properties =
       variant, title, href, icon, class_name, properties
   end

@@ -18,28 +18,28 @@ This is possible with [Turbo Native](https://github.com/hotwired/turbo-ios/), a 
 
 Follow along as we build a hybrid iOS from scratch alongside the supporting Rails code.
 
-{% include jumpstart.html %}
+![](cta://services)
 
-## [1. The Turbo framework]({% post_url turbo-ios/2021-02-18-the-turbo-framework %})
+## [1. The Turbo framework](/turbo-ios/the-turbo-framework)
 
 This introduction covers the benefits of hybrid apps and how Turbo helps bridge the gap between web and native. It also breaks down the code in the Quick Start guide from the Turbo wiki line by line. A perfect place to start for those new to Turbo or hybrid in general.
 
-## [2. URL routing]({% post_url turbo-ios/2021-02-26-url-routing %})
+## [2. URL routing](turbo-ios/url-routing)
 
 The second article covers everything related to routing URLs. This includes visit actions (advance vs. replace), path configuration, error handling, and native view controllers. It also touches on how forms work in Turbo iOS and why you might be running into issues with your Rails app.
 
-## [3. Forms and basic authentication]({% post_url turbo-ios/2021-03-19-forms-and-basic-authentication %})
+## [3. Forms and basic authentication](turbo-ios/forms-and-basic-authentication)
 
 Part 3 covers slightly more advanced topics: forms and basic authentication. Learn how to install Turbo in Rails 6, add custom form handling for the iOS client, and get up and running with web-based authentication.
 
-## [4. The JavaScript bridge]({% post_url turbo-ios/2021-04-02-the-javascript-bridge %})
+## [4. The JavaScript bridge](/turbo-ios/the-javascript-bridge)
 
 Having all our content in rendered on the web comes with some trade-offs. What if we want a native navigation bar button? Enter the JavaScript bridge, where we can pass messages between client and server without waiting for someone to tap a link.
 
-## [5. Native authentication]({% post_url turbo-ios/2021-04-22-native-authentication %})
+## [5. Native authentication](/turbo-ios/native-authentication)
 
 One major limitation of web-only authentication is, well, it's web only. Native authentication, on the other hand, opens up a world of possibilities. It breaks your app out of the web world and enables fully native screens. Meaning, you can integrate native SDKs like location services and push notifications. Or, you can render SwiftUI views for the really important stuff.
 
-## [6. Tips and tricks]({% post_url turbo-ios/2021-05-13-tips-and-tricks %})
+## [6. Tips and tricks](/turbo-ios/tips-and-tricks)
 
 To wrap up the series I’m sharing tips and tricks I’ve picked up over the years that range from making development easier to making the app feel more native. How to dismiss a modal after submitting a form, fixes for double pushed controllers, disabling link previews (Force Touch), and more.

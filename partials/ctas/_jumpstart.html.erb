@@ -1,0 +1,14 @@
+<div class="not-prose">
+  <div class="rounded-2xl border border-zinc-100 p-6">
+    <h3 class="flex items-center font-semibold text-zinc-900">
+      <%= inline_svg "icons/outline/bolt.svg", class: "h-6 w-6 flex-none" %>
+      <span class="ml-3"><%= local_assigns[:title] || "Jumpstart Pro iOS Template" %></span>
+    </h3>
+
+    <p class="mt-2 text-sm text-zinc-600">Chris Oliver, creator of GoRails, and I built an iOS template that supercharges your Rails application with easy Turbo native integration. It does all the hard work, so you can focus on the fun stuff.</p>
+
+    <div class="mt-6">
+      <%= render UI::Button.new(title: "Download template", href: "https://jumpstartrails.com/ios?utm_source=masilotti.com", target: "_blank") %>
+    </div>
+  </div>
+</div>

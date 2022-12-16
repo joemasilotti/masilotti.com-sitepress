@@ -1,0 +1,11 @@
+<div class="not-prose">
+  <div class="rounded-2xl border border-zinc-100 p-6">
+    <h3 class="flex items-center text-lg font-semibold text-zinc-900"><%= local_assigns[:title] || "Need extra help?" %></h3>
+
+    <p class="mt-2 text-zinc-600">I've helped half a dozen businesses launch in the App Store and consulted for twice as many. And I'd love to help <span class="font-semibold">you</span> port your Rails app to iOS!</p>
+
+    <div class="mt-6">
+      <%= render UI::Button.new(title: "Work with Joe", href: "/services") %>
+    </div>
+  </div>
+</div>

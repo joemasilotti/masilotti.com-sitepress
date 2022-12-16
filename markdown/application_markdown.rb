@@ -21,7 +21,17 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
     [:fenced_code_blocks]
   end
 
+  def block_code(code, language)
+    content_tag :pre, class: "language-#{language}" do
+      content_tag :code, class: "code language-#{language}" do
+        raw highlight_code code, language
+      end
+    end
+  end
+
   # Newsletter CTA: `![Subscribe!](cta://newsletter)`
+  # Services CTA: `![Let's work together!](cta://services)`
+  # Jumpstart CTA: `![Buy Jumpstart!](cta://jumpstart)`
   # Button-styled link: `![Click me!](button://solid/play_circle "https://example.com")`
   def image(link, title, alt_text)
     url = URI.parse(link)
@@ -34,14 +44,6 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
         locals: {title: alt_text, icon: url.host + url.path, href: title}
     else
       render UI::Figure.new(link, title: alt_text, href: title)
-    end
-  end
-
-  def block_code(code, language)
-    content_tag :pre, class: "language-#{language}" do
-      content_tag :code, class: "code language-#{language}" do
-        raw highlight_code code, language
-      end
     end
   end
 end
