@@ -1,17 +1,14 @@
 <div class="not-prose">
-  <form action="/thank-you" class="rounded-2xl border border-zinc-100 p-6">
+  <div class="rounded-2xl border border-zinc-100 p-6">
     <h3 class="flex items-center font-semibold text-zinc-900">
       <%= inline_svg "icons/outline/envelope.svg", class: "h-6 w-6 flex-none" %>
-      <span class="ml-3"><%= local_assigns[:title] || "Stay up to date" %></span>
+      <span class="ml-3"><%= local_assigns[:title] || "Subscribe to the ⚡️ Turbo Native workshop" %></span>
     </h3>
 
-    <p class="mt-2 text-sm text-zinc-600">
-      Get notified when I publish something new, and unsubscribe at any time.
-    </p>
+    <p class="mt-2 text-sm text-zinc-600">Turbo (Native), Stimulus, and Strada articles, code, courses, and more every month.</p>
 
-    <div class="mt-6 flex">
-      <input type="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" class="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm">
-      <%= render UI::Button.new(title: "Join", class_name: "ml-4 flex-none") %>
+    <div class="mt-6">
+      <%= render EmailCapture.new(data.newsletters.hotwire, cta: "Sign up") %>
     </div>
-  </form>
+  </div>
 </div>
