@@ -1,6 +1,4 @@
 module MetaHelper
-  delegate :page_url, to: "Rails.application.routes.url_helpers"
-
   def title
     [current_page.data.title, "Masilotti.com"].compact.join(" | ")
   end
@@ -10,11 +8,13 @@ module MetaHelper
   end
 
   def url
-    page_url(current_page.request_path.delete_prefix("/"))
+    path = current_page.request_path.delete_prefix("/")
+    page_url(path, host:)
   end
 
   def image
-    image_url(current_page.data.image || data.site.image)
+    image = current_page.data.image || data.site.image
+    image_url(image, host:)
   end
 
   def twitter
@@ -24,5 +24,11 @@ module MetaHelper
   def twitter_card
     # TODO: Always large?
     "summary_large_image"
+  end
+
+  private
+
+  def host
+    ENV.fetch("HOST", "http://localhost:8080")
   end
 end
